@@ -102,7 +102,9 @@
   font-style: normal;
 }
 
-
+.whi {
+color: white;
+}
 
 html {
   -webkit-box-sizing: border-box;
@@ -110,8 +112,8 @@ html {
   -webkit-font-smoothing: antialiased; }
 
 body {
-  color: #fff;
-  background: #191b1d;
+  color: #fff !important;
+  background-color: #191b1d !important;
   line-height: 1.5;
   font-family: 'somar';
   font-weight: 400;
@@ -188,14 +190,17 @@ p {
   color: #d6d7da; }
 
 a, a:hover {
-  color: inherit; }
+  color: inherit;
+text-decoration: none !important;
+}
 
 span {
   display: inline-block; }
 
 a {
   display: inline-block;
-  text-decoration: none; }
+  text-decoration: none;
+color: white !important; }
   a:hover {
     text-decoration: none; }
 
@@ -258,7 +263,7 @@ figure {
     -ms-transform: scale(0.8);
     transform: scale(0.8); }
     .circle-bord .carrow.arow-down {
-      left: calc(50% - 25px);
+      right: calc(50% - 20px);
       top: 45%; }
       .circle-bord .carrow.arow-down svg {
         -webkit-transform: rotateZ(90deg);
@@ -320,6 +325,9 @@ figure {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+    .rotate-circle text {
+      direction: ltr;
+    }
 
 /* ====================== [ End circle-bord ] ====================== */
 /* ====================== [ Start lines ] ====================== */
@@ -428,7 +436,8 @@ main {
         -webkit-text-stroke: 1px #fff; }
 
 .slide-har {
-  position: relative; }
+  position: relative; 
+direction: ltr;}
   .slide-har.st1 .box {
     position: relative;
     -webkit-animation: slide-har 50s linear infinite;
@@ -569,8 +578,8 @@ main {
       -ms-transform: scale(1);
       transform: scale(1); }
   .imago.animated {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+    -webkit-clip-path:polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    clip-path:polygon(0 0, 0 100%, 100% 100%, 100% 0) }
 
 .sp-hover:hover .char {
   -webkit-animation: fadeInUpSm 0.2s cubic-bezier(0.3, 0, 0.7, 1) both;
@@ -967,7 +976,7 @@ main {
 .simple-head h6 {
   font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 4px;
+ 
   margin-bottom: 10px;
   opacity: .8; }
 
@@ -980,7 +989,6 @@ main {
     font-size: 12px;
     font-weight: 200;
     text-transform: uppercase;
-    letter-spacing: 4px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
@@ -1038,7 +1046,7 @@ main {
 .sub-title {
   font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  //ing: 2px;
   margin-bottom: 15px; }
   .sub-title.bg {
     display: inline-block;
@@ -1068,7 +1076,7 @@ main {
     padding: 0 50px;
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 1px; }
+   }
 
 .sub-head {
   display: inline-block;
@@ -1628,7 +1636,6 @@ main {
           font-size: 13px;
           font-weight: 600;
           text-transform: uppercase;
-          letter-spacing: 1px;
           margin-bottom: 10px;
           cursor: pointer; }
       .nav-side .navbar-unav .unav-item .dropdown-item {
@@ -2054,7 +2061,6 @@ header .arrow-down {
   .showcase-full .parallax-slider .caption h1 {
     font-size: 80px;
     font-weight: 700;
-    letter-spacing: 1px;
     -webkit-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
@@ -2087,7 +2093,6 @@ header .arrow-down {
     border-radius: 50%;
     font-size: 13px;
     font-weight: 200;
-    letter-spacing: 4px;
     text-transform: uppercase;
     -webkit-transition-delay: 2s;
     -o-transition-delay: 2s;
@@ -2332,7 +2337,8 @@ header .arrow-down {
     .intro-box .img .vid-show {
       position: absolute;
       top: 0px;
-      right: -100px; }
+      left
+      : -100px; }
       .intro-box .img .vid-show.non-icon:before {
         content: '';
         position: absolute;
@@ -2397,7 +2403,7 @@ header .arrow-down {
       font-size: 11px;
       font-weight: 800;
       font-family: 'somar';
-      letter-spacing: 2px; }
+ }
     .awards-list .img .circle:after {
       content: '';
       position: absolute;
@@ -2730,7 +2736,7 @@ header .arrow-down {
   .portfolio.agn .item-img .tag {
     font-size: 13px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+   
     position: absolute;
     top: 50px;
     right: -60px;
@@ -2767,7 +2773,7 @@ header .arrow-down {
   font-weight: 500;
   margin-right: 20px;
   padding-right: 30px;
-  letter-spacing: 1px;
+ 
   cursor: pointer;
   position: relative; }
   .portfolio .filtering span:after {
@@ -3437,12 +3443,13 @@ header .arrow-down {
   margin-bottom: 30px; }
 
 .simpl-bord .nav-item {
-  margin-right: 50px; }
+  margin-left
+: 50px; }
   .simpl-bord .nav-item:last-of-type {
     margin-right: 0; }
 
 .simpl-bord .nav-link {
-  padding: 0;
+  padding: 5px;
   border: 0;
   color: inherit;
   background: transparent !important;
@@ -3450,7 +3457,7 @@ header .arrow-down {
   cursor: pointer; }
   .simpl-bord .nav-link.active {
     font-weight: 600;
-    color: #ff7425; }
+    color: #ff7425 !important; }
 
 .list.bord-left {
   padding-left: 20px;
@@ -3675,7 +3682,6 @@ header .arrow-down {
     .blog-modern .item .img .date {
       font-size: 13px;
       text-transform: uppercase;
-      letter-spacing: 1px;
       position: absolute;
       top: 60px;
       right: -60px;
@@ -4087,7 +4093,6 @@ header .arrow-down {
     font-size: 70px;
     margin-bottom: 40px; }
   .number-sec .item h3 {
-    letter-spacing: 2px;
     margin-bottom: 15px; }
 
 .numbers .item {
@@ -4095,7 +4100,7 @@ header .arrow-down {
   display: -ms-flexbox;
   display: flex; }
   .numbers .item .numb {
-    padding-right: 30px; }
+    padding-left: 30px; }
     .numbers .item .numb h3 {
       font-size: 50px;
       line-height: 1; }
@@ -4969,53 +4974,7 @@ img.left {
 .text-right {
   text-align: right; }
 
-/*-------------------------------------------------------
-           letter-spacing
--------------------------------------------------------*/
-.ls0 {
-  letter-spacing: 0px !important; }
 
-.ls1 {
-  letter-spacing: 1px !important; }
-
-.ls2 {
-  letter-spacing: 2px !important; }
-
-.ls3 {
-  letter-spacing: 3px !important; }
-
-.ls4 {
-  letter-spacing: 4px !important; }
-
-.ls5 {
-  letter-spacing: 5px !important; }
-
-.ls6 {
-  letter-spacing: 6px !important; }
-
-.ls7 {
-  letter-spacing: 7px !important; }
-
-.ls8 {
-  letter-spacing: 8px !important; }
-
-.ls9 {
-  letter-spacing: 9px !important; }
-
-.ls10 {
-  letter-spacing: 10px !important; }
-
-.ls15 {
-  letter-spacing: 15px !important; }
-
-.ls20 {
-  letter-spacing: 20px !important; }
-
-.ls25 {
-  letter-spacing: 25px !important; }
-
-.ls30 {
-  letter-spacing: 30px !important; }
 
 /*-------------------------------------------------------
        margin-top  (0/100) +5
@@ -6422,7 +6381,7 @@ body.light {
     font-size: 35px; }
   .slider .parallax-slider .caption h1 {
     font-size: 25px;
-    letter-spacing: normal; }
+     /*  */}
     .slider .parallax-slider .caption h1 div {
       display: inline-block; }
   .ed-slide .cont h1 {
